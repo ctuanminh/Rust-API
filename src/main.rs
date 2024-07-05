@@ -4,9 +4,9 @@ use std::io::{self};
 fn main() {
     println!("Nhap vao:");
     let secrect_number = rand::thread_rng().gen_range(1..=100);
+    //su dụng hàm random
     println!("The secrect number is = {}", secrect_number);
     let mut guess = String::new(); //Variable mutabel(co the thay doi duoc)
-    let apple = 5; // Variable immutable khong the thay doi duoc.
 
     io::stdin()
         .read_line(&mut guess)
@@ -21,6 +21,4 @@ fn main() {
         Ordering::Equal => println!("You win"),
         Ordering::Greater => println!("To big"),
     }
-    println!("Apple: {apple}");
-    println!("x = {}, y= {}", guess, apple);
 }
